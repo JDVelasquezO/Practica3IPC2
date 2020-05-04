@@ -1,0 +1,5 @@
+C:\Users\JDVelasquezO\source\repos\Practica3\Entity\bin\Debug\Entity.dll
+C:\Users\JDVelasquezO\source\repos\Practica3\Entity\bin\Debug\Entity.pdb
+C:\Users\JDVelasquezO\source\repos\Practica3\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\JDVelasquezO\source\repos\Practica3\Entity\obj\Debug\Entity.dll
+C:\Users\JDVelasquezO\source\repos\Practica3\Entity\obj\Debug\Entity.pdb

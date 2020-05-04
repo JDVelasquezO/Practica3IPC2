@@ -1,0 +1,11 @@
+C:\Users\JDVelasquezO\source\repos\Practica3\Logic\bin\Debug\Logic.dll
+C:\Users\JDVelasquezO\source\repos\Practica3\Logic\bin\Debug\Logic.pdb
+C:\Users\JDVelasquezO\source\repos\Practica3\Logic\bin\Debug\DataAccess.dll
+C:\Users\JDVelasquezO\source\repos\Practica3\Logic\bin\Debug\Entity.dll
+C:\Users\JDVelasquezO\source\repos\Practica3\Logic\bin\Debug\DataAccess.pdb
+C:\Users\JDVelasquezO\source\repos\Practica3\Logic\bin\Debug\Entity.pdb
+C:\Users\JDVelasquezO\source\repos\Practica3\Logic\obj\Debug\Logic.csprojAssemblyReference.cache
+C:\Users\JDVelasquezO\source\repos\Practica3\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
+C:\Users\JDVelasquezO\source\repos\Practica3\Logic\obj\Debug\Logic.csproj.CopyComplete
+C:\Users\JDVelasquezO\source\repos\Practica3\Logic\obj\Debug\Logic.dll
+C:\Users\JDVelasquezO\source\repos\Practica3\Logic\obj\Debug\Logic.pdb

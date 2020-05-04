@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Practica3
+namespace Practica3.Client
 {
-    public partial class Form1 : Form
+    public partial class HomeClient : Form
     {
-        public Form1()
+        public HomeClient()
         {
             InitializeComponent();
         }

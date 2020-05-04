@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    class Client
+    public class Client
     {
+        public int id_client { get; set; }
+        public int nit_client { get; set; }
+        public string first_client { get; set; }
+        public string last_client { get; set; }
+        public string phone { get; set; }
+        public string address { get; set; }
     }
 }
