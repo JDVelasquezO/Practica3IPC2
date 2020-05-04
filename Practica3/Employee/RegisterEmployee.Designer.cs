@@ -44,6 +44,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.cbxTypeEmployees = new System.Windows.Forms.ComboBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -68,14 +70,14 @@
             // 
             // txtFirst
             // 
-            this.txtFirst.Location = new System.Drawing.Point(99, 131);
+            this.txtFirst.Location = new System.Drawing.Point(139, 132);
             this.txtFirst.Name = "txtFirst";
             this.txtFirst.Size = new System.Drawing.Size(235, 20);
             this.txtFirst.TabIndex = 3;
             // 
             // txtLast
             // 
-            this.txtLast.Location = new System.Drawing.Point(99, 178);
+            this.txtLast.Location = new System.Drawing.Point(139, 179);
             this.txtLast.Name = "txtLast";
             this.txtLast.Size = new System.Drawing.Size(235, 20);
             this.txtLast.TabIndex = 5;
@@ -92,7 +94,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(99, 221);
+            this.txtPhone.Location = new System.Drawing.Point(139, 222);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(235, 20);
             this.txtPhone.TabIndex = 7;
@@ -109,7 +111,7 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(99, 268);
+            this.txtAddress.Location = new System.Drawing.Point(139, 269);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(235, 20);
             this.txtAddress.TabIndex = 9;
@@ -126,7 +128,7 @@
             // 
             // txtCUI
             // 
-            this.txtCUI.Location = new System.Drawing.Point(99, 88);
+            this.txtCUI.Location = new System.Drawing.Point(139, 89);
             this.txtCUI.Name = "txtCUI";
             this.txtCUI.Size = new System.Drawing.Size(235, 20);
             this.txtCUI.TabIndex = 11;
@@ -143,7 +145,7 @@
             // 
             // txtSalary
             // 
-            this.txtSalary.Location = new System.Drawing.Point(99, 306);
+            this.txtSalary.Location = new System.Drawing.Point(139, 309);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(235, 20);
             this.txtSalary.TabIndex = 13;
@@ -160,12 +162,14 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(99, 406);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(89, 32);
             this.button1.TabIndex = 14;
             this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
@@ -180,16 +184,35 @@
             // cbxTypeEmployees
             // 
             this.cbxTypeEmployees.FormattingEnabled = true;
-            this.cbxTypeEmployees.Location = new System.Drawing.Point(168, 352);
+            this.cbxTypeEmployees.Location = new System.Drawing.Point(208, 352);
             this.cbxTypeEmployees.Name = "cbxTypeEmployees";
             this.cbxTypeEmployees.Size = new System.Drawing.Size(166, 21);
             this.cbxTypeEmployees.TabIndex = 16;
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(139, 50);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(235, 20);
+            this.txtID.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(13, 50);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(101, 20);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Identificador:";
             // 
             // RegisterEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 450);
+            this.ClientSize = new System.Drawing.Size(408, 450);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.cbxTypeEmployees);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
@@ -232,5 +255,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbxTypeEmployees;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label label9;
     }
 }

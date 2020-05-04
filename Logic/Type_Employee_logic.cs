@@ -16,5 +16,10 @@ namespace Logic
         {
             return type_Employee_Data.getListTypesEmployee();
         }
+
+        public int getIdByTypeEmployee(string typeEmployee)
+        {
+            return type_Employee_Data.getIdByTypeEmployee(typeEmployee);
+        }
     }
 }

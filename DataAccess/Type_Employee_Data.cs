@@ -43,5 +43,39 @@ namespace DataAccess
 
             return list;
         }
+
+        public int getIdByTypeEmployee(string typeEmployee)
+        {
+            int id = 0;
+
+            try
+            {
+                conn.open();
+                
+                SqlCommand cmd = new SqlCommand("getIdTypeEmployee", conn.returnConn());
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter p_typeEmployee = new SqlParameter();
+                p_typeEmployee.ParameterName = "@typeEmployee";
+                p_typeEmployee.SqlDbType = SqlDbType.VarChar;
+                p_typeEmployee.Value = typeEmployee;
+
+                cmd.Parameters.Add(p_typeEmployee);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    id = Convert.ToInt32(reader["id_type_employee"]);
+                }
+
+                conn.close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return id;
+        }
     }
 }
