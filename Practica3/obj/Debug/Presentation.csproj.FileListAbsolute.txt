@@ -18,3 +18,4 @@ C:\Users\JDVelasquezO\source\repos\Practica3\Practica3\obj\Debug\Presentation.cs
 C:\Users\JDVelasquezO\source\repos\Practica3\Practica3\obj\Debug\Presentation.csproj.CopyComplete
 C:\Users\JDVelasquezO\source\repos\Practica3\Practica3\obj\Debug\Practica3.exe
 C:\Users\JDVelasquezO\source\repos\Practica3\Practica3\obj\Debug\Practica3.pdb
+C:\Users\JDVelasquezO\source\repos\Practica3\Practica3\obj\Debug\Practica3.Bill.HomeBill.resources

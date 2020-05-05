@@ -84,5 +84,71 @@ namespace DataAccess
 
             return response;
         }
+
+        public List<String> getReceptorEmployee()
+        {
+            List<String> list = new List<String>();
+
+            try
+            {
+                conn.open();
+                String nameObject = "";
+
+                SqlCommand cmd;
+                SqlDataReader reader;
+
+                cmd = new SqlCommand("SELECT id_employee, CONCAT(first_name, ' ', last_name) AS 'Nombre' FROM employee WHERE fk_id_typeemployee = 1", conn.returnConn());
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string id = reader["id_employee"].ToString();
+                    string name = reader["Nombre"].ToString();
+                    nameObject = $"{id} - {name}";
+                    list.Add(nameObject);
+                }
+
+                conn.close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return list;
+        }
+
+        public List<String> getDeliveryEmployee()
+        {
+            List<String> list = new List<String>();
+
+            try
+            {
+                conn.open();
+                String nameObject = "";
+
+                SqlCommand cmd;
+                SqlDataReader reader;
+
+                cmd = new SqlCommand("SELECT id_employee, CONCAT(first_name, ' ', last_name) AS 'Nombre' FROM employee WHERE fk_id_typeemployee = 2", conn.returnConn());
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string id = reader["id_employee"].ToString();
+                    string name = reader["Nombre"].ToString();
+                    nameObject = $"{id} - {name}";
+                    list.Add(nameObject);
+                }
+
+                conn.close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return list;
+        }
     }
 }

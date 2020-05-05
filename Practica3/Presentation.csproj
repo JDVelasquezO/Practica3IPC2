@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bill\HomeBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bill\HomeBill.Designer.cs">
+      <DependentUpon>HomeBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee\RegisterEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="LoadForm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Bill\HomeBill.resx">
+      <DependentUpon>HomeBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee\RegisterEmployee.resx">
       <DependentUpon>RegisterEmployee.cs</DependentUpon>
     </EmbeddedResource>

@@ -45,6 +45,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.listSaucer = new System.Windows.Forms.ListView();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cbxReceptionEmployee = new System.Windows.Forms.ComboBox();
+            this.cbxAtendedEmployee = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtID
@@ -165,14 +170,14 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(8, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 24);
+            this.label1.Size = new System.Drawing.Size(147, 24);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Registrar Empleado";
+            this.label1.Text = "Datos de Cliente";
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(13, 322);
+            this.button2.Location = new System.Drawing.Point(497, 71);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(132, 37);
             this.button2.TabIndex = 37;
@@ -192,18 +197,70 @@
             // 
             // listSaucer
             // 
-            this.listSaucer.Location = new System.Drawing.Point(497, 58);
+            this.listSaucer.Location = new System.Drawing.Point(497, 114);
             this.listSaucer.Name = "listSaucer";
             this.listSaucer.Size = new System.Drawing.Size(229, 244);
             this.listSaucer.TabIndex = 39;
             this.listSaucer.UseCompatibleStateImageBehavior = false;
             this.listSaucer.View = System.Windows.Forms.View.List;
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(151, 401);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(132, 37);
+            this.button3.TabIndex = 40;
+            this.button3.Text = "Registrar Factura";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 319);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 20);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Atendido por";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(12, 357);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(106, 20);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "Repartido por";
+            // 
+            // cbxReceptionEmployee
+            // 
+            this.cbxReceptionEmployee.FormattingEnabled = true;
+            this.cbxReceptionEmployee.Location = new System.Drawing.Point(151, 319);
+            this.cbxReceptionEmployee.Name = "cbxReceptionEmployee";
+            this.cbxReceptionEmployee.Size = new System.Drawing.Size(219, 21);
+            this.cbxReceptionEmployee.TabIndex = 43;
+            // 
+            // cbxAtendedEmployee
+            // 
+            this.cbxAtendedEmployee.FormattingEnabled = true;
+            this.cbxAtendedEmployee.Location = new System.Drawing.Point(151, 359);
+            this.cbxAtendedEmployee.Name = "cbxAtendedEmployee";
+            this.cbxAtendedEmployee.Size = new System.Drawing.Size(219, 21);
+            this.cbxAtendedEmployee.TabIndex = 44;
+            // 
             // HomeDelivery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 450);
+            this.Controls.Add(this.cbxAtendedEmployee);
+            this.Controls.Add(this.cbxReceptionEmployee);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.listSaucer);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
@@ -248,5 +305,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListView listSaucer;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cbxReceptionEmployee;
+        private System.Windows.Forms.ComboBox cbxAtendedEmployee;
     }
 }

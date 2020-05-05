@@ -16,5 +16,15 @@ namespace Logic
         {
             return employee_Data.InsertEmployee(employee);
         }
+
+        public List<String> getReceptorEmployee()
+        {
+            return employee_Data.getReceptorEmployee();
+        }
+
+        public List<String> getDeliveryEmployee()
+        {
+            return employee_Data.getDeliveryEmployee();
+        }
     }
 }
