@@ -15,6 +15,7 @@ namespace Practica3.HomeDelivery
     public partial class HomeDelivery : Form
     {
         Employee_Logic employee_Logic = new Employee_Logic();
+        Client_Logic client_Logic = new Client_Logic();
         
         public HomeDelivery()
         {
@@ -26,8 +27,18 @@ namespace Practica3.HomeDelivery
             LoadForm.centerForm(this);
             cbxReceptionEmployee.Text = "Recepcionista";
             cbxAtendedEmployee.Text = "Repartidor";
+            cbxClients.Text = "Clientes";
+
+            List<String> nameClients = new List<string>();
+
+            foreach (var item in client_Logic.getClient())
+            {
+                nameClients.Add($"{item.id_client} - {item.first_client} {item.last_client}");
+            }
+
             LoadForm.fillCbx(cbxReceptionEmployee, employee_Logic.getReceptorEmployee());
             LoadForm.fillCbx(cbxAtendedEmployee, employee_Logic.getDeliveryEmployee());
+            LoadForm.fillCbx(cbxClients, nameClients);
             fillListView();
         }
 
