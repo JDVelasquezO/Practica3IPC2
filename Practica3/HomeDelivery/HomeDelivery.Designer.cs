@@ -43,6 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.listSaucer = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // txtID
@@ -172,17 +174,38 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(13, 322);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 23);
+            this.button2.Size = new System.Drawing.Size(132, 37);
             this.button2.TabIndex = 37;
             this.button2.Text = "Ver Platillos";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(493, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(183, 24);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "Agregado a la orden";
+            // 
+            // listSaucer
+            // 
+            this.listSaucer.Location = new System.Drawing.Point(497, 58);
+            this.listSaucer.Name = "listSaucer";
+            this.listSaucer.Size = new System.Drawing.Size(229, 244);
+            this.listSaucer.TabIndex = 39;
+            this.listSaucer.UseCompatibleStateImageBehavior = false;
+            this.listSaucer.View = System.Windows.Forms.View.List;
+            // 
             // HomeDelivery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 450);
+            this.ClientSize = new System.Drawing.Size(738, 450);
+            this.Controls.Add(this.listSaucer);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label9);
@@ -223,5 +246,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListView listSaucer;
     }
 }

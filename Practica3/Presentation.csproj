@@ -70,6 +70,7 @@
     <Compile Include="HomeDelivery\HomeSaucer.Designer.cs">
       <DependentUpon>HomeSaucer.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomeDelivery\ListSaucers.cs" />
     <Compile Include="LoadForm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
