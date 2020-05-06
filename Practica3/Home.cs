@@ -33,5 +33,11 @@ namespace Practica3
             RegisterEmployee registerEmployee = new RegisterEmployee();
             registerEmployee.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HomeDelivery.HomeDelivery homeDelivery = new HomeDelivery.HomeDelivery();
+            homeDelivery.Show();
+        }
     }
 }

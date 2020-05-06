@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client\HomeClient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Client\HomeClient.Designer.cs">
-      <DependentUpon>HomeClient.cs</DependentUpon>
-    </Compile>
     <Compile Include="Employee\RegisterEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,17 +58,32 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomeDelivery\HomeDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeDelivery\HomeDelivery.Designer.cs">
+      <DependentUpon>HomeDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeDelivery\HomeSaucer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeDelivery\HomeSaucer.Designer.cs">
+      <DependentUpon>HomeSaucer.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoadForm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Client\HomeClient.resx">
-      <DependentUpon>HomeClient.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Employee\RegisterEmployee.resx">
       <DependentUpon>RegisterEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeDelivery\HomeDelivery.resx">
+      <DependentUpon>HomeDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeDelivery\HomeSaucer.resx">
+      <DependentUpon>HomeSaucer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
