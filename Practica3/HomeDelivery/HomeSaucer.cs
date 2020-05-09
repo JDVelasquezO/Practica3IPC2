@@ -41,11 +41,6 @@ namespace Practica3.HomeDelivery
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*foreach (var item in ListSaucers.saucers)
-            {
-                MessageBox.Show(item.nameSaucer);
-            }*/
-
             HomeDelivery homeDelivery = new HomeDelivery();
             homeDelivery.Show();
         }
@@ -55,8 +50,8 @@ namespace Practica3.HomeDelivery
             Saucer saucer = new Saucer();
             saucer.idSaucer = Convert.ToInt32(dgvSaucer.Rows[e.RowIndex].Cells["idSaucer"].FormattedValue.ToString());
             saucer.nameSaucer = dgvSaucer.Rows[e.RowIndex].Cells["nameSaucer"].FormattedValue.ToString();
-            saucer.costSaucer = float.Parse(dgvSaucer.Rows[e.RowIndex].Cells["costSaucer"].FormattedValue.ToString());
-            string quantity = dgvSaucer.Rows[e.RowIndex].Cells["idSaucer"].FormattedValue.ToString();
+            string quantity = dgvSaucer.Rows[e.RowIndex].Cells["quantity"].FormattedValue.ToString();
+            saucer.costSaucer = float.Parse(dgvSaucer.Rows[e.RowIndex].Cells["costSaucer"].FormattedValue.ToString()) * float.Parse(quantity);
 
             MessageBox.Show($"Platillo {saucer.nameSaucer} agregado a la lista");
             ListSaucers.saucers.Add(saucer);

@@ -36,8 +36,8 @@ namespace Practica3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            HomeDelivery.HomeDelivery homeDelivery = new HomeDelivery.HomeDelivery();
-            homeDelivery.Show();
+            HomeDelivery.HomeSaucer homeSaucer = new HomeDelivery.HomeSaucer();
+            homeSaucer.Show();
         }
     }
 }

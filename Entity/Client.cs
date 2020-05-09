@@ -14,5 +14,6 @@ namespace Entity
         public string last_client { get; set; }
         public string phone { get; set; }
         public string address { get; set; }
+        public List<Saucer> saucers = new List<Saucer>();
     }
 }

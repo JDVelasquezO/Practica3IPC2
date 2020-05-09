@@ -48,5 +48,39 @@ namespace DataAccess
 
             return list;
         }
+
+        public Client searchClientByCUI(int cui)
+        {
+            Client client = new Client();
+
+            try
+            {
+                conn.open();
+
+                SqlCommand cmd;
+                SqlDataReader reader;
+
+                cmd = new SqlCommand($"SELECT * FROM client WHERE CUI = {cui}", conn.returnConn());
+                reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    client.id_client = Convert.ToInt32(reader["cui"].ToString());
+                    client.first_client = reader["first_name"].ToString();
+                    client.last_client = reader["last_name"].ToString();
+                    client.phone = reader["phone"].ToString();
+                    client.nit_client = Convert.ToInt32(reader["nit"].ToString());
+                    client.address = reader["address"].ToString();
+                }
+
+                conn.close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return client;
+        }
     }
 }

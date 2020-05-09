@@ -16,5 +16,10 @@ namespace Logic
         {
             return client_Data.getClient();
         }
+
+        public Client searchClientByCUI(int cui)
+        {
+            return client_Data.searchClientByCUI(cui);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,8 @@ namespace Practica3
 {
     public static class LoadForm
     {
+        public static Client client = new Client();
+
         public static void centerForm(Form form)
         {
             form.Top = (Screen.PrimaryScreen.WorkingArea.Height - form.Height) / 2;

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entity;
 
 namespace Practica3.HomeDelivery
 {
@@ -63,8 +64,42 @@ namespace Practica3.HomeDelivery
 
         private void button3_Click(object sender, EventArgs e)
         {
+            LoadForm.client.nit_client = Convert.ToInt32(txtNIT.Text);
+            LoadForm.client.first_client = txtFirst.Text;
+            LoadForm.client.last_client = txtLast.Text;
+            LoadForm.client.address = txtAddress.Text;
+
+            foreach (var item in ListSaucers.saucers)
+            {
+                LoadForm.client.saucers.Add(item);
+            }
+
+
             HomeBill homeBill = new HomeBill();
             homeBill.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            int cui = Convert.ToInt32(cbxClients.SelectedItem.ToString().Split(' ')[0]);
+            Client client = client_Logic.searchClientByCUI(cui);
+
+            fillForm(client);
+        }
+
+        public void fillForm(Client client)
+        {
+            txtID.Text = client.id_client.ToString();
+            txtNIT.Text = client.nit_client.ToString();
+            txtFirst.Text = client.first_client;
+            txtLast.Text = client.last_client;
+            txtPhone.Text = client.phone;
+            txtAddress.Text = client.address;
         }
     }
 }
