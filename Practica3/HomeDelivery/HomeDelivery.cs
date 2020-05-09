@@ -17,6 +17,7 @@ namespace Practica3.HomeDelivery
     {
         Employee_Logic employee_Logic = new Employee_Logic();
         Client_Logic client_Logic = new Client_Logic();
+        HomeDelivery_Logic homeDelivery_Logic = new HomeDelivery_Logic();
         
         public HomeDelivery()
         {
@@ -74,7 +75,7 @@ namespace Practica3.HomeDelivery
                 LoadForm.client.saucers.Add(item);
             }
 
-
+            homeDelivery_Logic.InsertHomeDelivery(Convert.ToInt32(lblCode.Text));
             HomeBill homeBill = new HomeBill();
             homeBill.Show();
         }
@@ -94,6 +95,7 @@ namespace Practica3.HomeDelivery
 
         public void fillForm(Client client)
         {
+            lblCode.Text = client.idDBClient.ToString();
             txtID.Text = client.id_client.ToString();
             txtNIT.Text = client.nit_client.ToString();
             txtFirst.Text = client.first_client;

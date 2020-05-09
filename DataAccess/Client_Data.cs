@@ -65,6 +65,7 @@ namespace DataAccess
 
                 if (reader.Read())
                 {
+                    client.idDBClient = Convert.ToInt32(reader["id_client"]);
                     client.id_client = Convert.ToInt32(reader["cui"].ToString());
                     client.first_client = reader["first_name"].ToString();
                     client.last_client = reader["last_name"].ToString();

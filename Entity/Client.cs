@@ -8,6 +8,7 @@ namespace Entity
 {
     public class Client
     {
+        public int idDBClient { get; set; }
         public int id_client { get; set; }
         public int nit_client { get; set; }
         public string first_client { get; set; }
