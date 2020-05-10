@@ -42,6 +42,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblIDUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -169,11 +171,31 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Location = new System.Drawing.Point(367, 338);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(0, 13);
+            this.lblPrice.TabIndex = 48;
+            // 
+            // lblIDUser
+            // 
+            this.lblIDUser.AutoSize = true;
+            this.lblIDUser.Location = new System.Drawing.Point(215, 81);
+            this.lblIDUser.Name = "lblIDUser";
+            this.lblIDUser.Size = new System.Drawing.Size(30, 13);
+            this.lblIDUser.TabIndex = 49;
+            this.lblIDUser.Text = "texto";
+            this.lblIDUser.Visible = false;
+            // 
             // HomeBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 458);
+            this.Controls.Add(this.lblIDUser);
+            this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label8);
@@ -212,5 +234,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblIDUser;
     }
 }

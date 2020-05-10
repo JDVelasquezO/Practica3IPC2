@@ -15,6 +15,8 @@ namespace Practica3.HomeDelivery
 {
     public partial class HomeDelivery : Form
     {
+        List<int> idSaucers = new List<int>();
+
         Employee_Logic employee_Logic = new Employee_Logic();
         Client_Logic client_Logic = new Client_Logic();
         HomeDelivery_Logic homeDelivery_Logic = new HomeDelivery_Logic();
@@ -57,14 +59,16 @@ namespace Practica3.HomeDelivery
             {
                 foreach (var item in ListSaucers.saucers)
                 {
-                    string saucer = $"Q.{item.costSaucer} - {item.nameSaucer}\n";
+                    string saucer = $"{item.idSaucer} - Q.{item.costSaucer} - {item.nameSaucer}\n";
                     listSaucer.Items.Add(saucer);
+                    idSaucers.Add(item.idSaucer);
                 }
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            LoadForm.client.idDBClient = Convert.ToInt32(lblCode.Text);
             LoadForm.client.nit_client = Convert.ToInt32(txtNIT.Text);
             LoadForm.client.first_client = txtFirst.Text;
             LoadForm.client.last_client = txtLast.Text;
@@ -75,7 +79,8 @@ namespace Practica3.HomeDelivery
                 LoadForm.client.saucers.Add(item);
             }
 
-            homeDelivery_Logic.InsertHomeDelivery(Convert.ToInt32(lblCode.Text));
+            homeDelivery_Logic.InsertHomeDelivery(Convert.ToInt32(lblCode.Text), idSaucers);
+
             HomeBill homeBill = new HomeBill();
             homeBill.Show();
         }

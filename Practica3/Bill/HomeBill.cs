@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace Practica3.Bill
 {
     public partial class HomeBill : Form
     {
+        Bill_Logic bill_Logic = new Bill_Logic();
+
         public HomeBill()
         {
             InitializeComponent();
@@ -25,6 +28,9 @@ namespace Practica3.Bill
             txtAdress.Text = LoadForm.client.address;
             txtNIT.Text = LoadForm.client.nit_client.ToString();
             txtName.Text = fullName;
+            lblIDUser.Text = LoadForm.client.idDBClient.ToString();
+
+            float totalPrice = 0;
 
             if (HomeDelivery.ListSaucers.saucers.Count > 0)
             {
@@ -32,8 +38,11 @@ namespace Practica3.Bill
                 {
                     string saucer = $"Q.{item.costSaucer} - {item.nameSaucer}\n";
                     listSaucer.Items.Add(saucer);
+                    totalPrice += item.costSaucer;
                 }
             }
+
+            lblPrice.Text = $"{totalPrice.ToString()}";
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -48,7 +57,13 @@ namespace Practica3.Bill
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Entity.Bill bill = new Entity.Bill();
+            bill.id_bill = Convert.ToInt32(txtNoBill.Text);
+            bill.totalPrice = float.Parse(lblPrice.Text);
+            bill.client.idDBClient = Convert.ToInt32(lblIDUser.Text);
 
+            bill_Logic.InsertHomeDelivery(bill);
+            MessageBox.Show("Factura Registrada");
         }
     }
 }

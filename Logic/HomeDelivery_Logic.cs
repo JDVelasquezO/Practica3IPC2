@@ -11,9 +11,9 @@ namespace Logic
     {
         HomeDelivery_Data homeDelivery = new HomeDelivery_Data();
 
-        public bool InsertHomeDelivery(int id)
+        public bool InsertHomeDelivery(int id, List<int> idSaucers)
         {
-            return homeDelivery.InsertHomeDelivery(id);
+            return homeDelivery.InsertHomeDelivery(id, idSaucers);
         }
     }
 }
